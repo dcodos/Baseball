@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="gtranslateapi-1.0">
+    <archive path="C:/Users/Danny/Downloads/gtranslateapi-1.0.jar" />
+  </library>
+  <library name="JNativeHook-1.1.4" />
+  <library name="jl1.0">
+    <archive path="C:/Users/Danny/Downloads/jl1.0.jar" />
+  </library>
+  <library name="JNativeHook">
+    <archive path="C:/Users/Danny/Downloads/JNativeHook-1.1.4/JNativeHook/jar/JNativeHook.jar" />
+  </library>
+</eclipse-userlibraries>
+

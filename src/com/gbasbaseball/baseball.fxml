@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.media.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:id="vBox1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gbasbaseball.Controller">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Text fx:id="awayScore" strokeType="OUTSIDE" strokeWidth="0.0" text="Away Score: 0">
+               <HBox.margin>
+                  <Insets right="75.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="100.0" />
+               </font>
+            </Text>
+            <Text fx:id="homeScore" strokeType="OUTSIDE" strokeWidth="0.0" text="Home Score: 0">
+               <HBox.margin>
+                  <Insets left="75.0" />
+               </HBox.margin>
+               <font>
+                  <Font size="100.0" />
+               </font>
+            </Text>
+         </children>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Outs:">
+               <font>
+                  <Font size="75.0" />
+               </font>
+            </Text>
+            <Circle fx:id="out1" fill="#1f93ff00" radius="25.0" stroke="BLACK" strokeType="INSIDE">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Circle>
+            <Circle fx:id="out2" fill="#1f93ff00" radius="25.0" stroke="BLACK" strokeType="INSIDE">
+               <HBox.margin>
+                  <Insets left="5.0" right="40.0" />
+               </HBox.margin>
+            </Circle>
+            <GridPane>
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="-Infinity" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Text fx:id="onSecond" strokeType="OUTSIDE" strokeWidth="0.0" text="On Second" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="onFirst" strokeType="OUTSIDE" strokeWidth="0.0" text="On First" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="15.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <Text fx:id="onThird" strokeType="OUTSIDE" strokeWidth="0.0" text="On Third" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets right="15.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <Button fx:id="stealButton" mnemonicParsing="false" onAction="#stealAction" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <graphic>
+                        <ImageView fx:id="baseImg" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@empty_diamond.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+               <HBox.margin>
+                  <Insets left="40.0" right="40.0" />
+               </HBox.margin>
+            </GridPane>
+            <Text fx:id="inningText" strokeType="OUTSIDE" strokeWidth="0.0" text="Inning: 1">
+               <font>
+                  <Font size="75.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="40.0" />
+               </HBox.margin>
+            </Text>
+         </children>
+         <VBox.margin>
+            <Insets top="50.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="60.0" prefWidth="200.0">
+         <children>
+            <GridPane alignment="CENTER" gridLinesVisible="true">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="ALWAYS" minWidth="20.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="125.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="125.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="125.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="125.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="125.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="125.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="125.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="125.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="125.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="125.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="20.0" prefWidth="125.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+                  <RowConstraints vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Text fx:id="awayGrid" strokeType="OUTSIDE" strokeWidth="0.0" text="Away" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="30.0" right="30.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="1" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="3" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="5" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="6" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="7" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="8" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="9" GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="R" GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="H" GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="homeGrid" strokeType="OUTSIDE" strokeWidth="0.0" text="Home" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="away1" strokeType="OUTSIDE" strokeWidth="0.0" text=" " GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="away2" strokeType="OUTSIDE" strokeWidth="0.0" text=" " GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="away3" strokeType="OUTSIDE" strokeWidth="0.0" text=" " GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="away4" strokeType="OUTSIDE" strokeWidth="0.0" text=" " GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="away5" strokeType="OUTSIDE" strokeWidth="0.0" text=" " GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="away6" strokeType="OUTSIDE" strokeWidth="0.0" text=" " GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="away7" strokeType="OUTSIDE" strokeWidth="0.0" text=" " GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="away8" strokeType="OUTSIDE" strokeWidth="0.0" text=" " GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="away9" strokeType="OUTSIDE" strokeWidth="0.0" text=" " GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="awayR" strokeType="OUTSIDE" strokeWidth="0.0" text=" " GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="awayH" strokeType="OUTSIDE" strokeWidth="0.0" text=" " GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="home1" strokeType="OUTSIDE" strokeWidth="0.0" text=" " GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="home2" strokeType="OUTSIDE" strokeWidth="0.0" text=" " GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="home3" strokeType="OUTSIDE" strokeWidth="0.0" text=" " GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="home4" strokeType="OUTSIDE" strokeWidth="0.0" text=" " GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="home5" strokeType="OUTSIDE" strokeWidth="0.0" text=" " GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="home6" strokeType="OUTSIDE" strokeWidth="0.0" text=" " GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="home7" strokeType="OUTSIDE" strokeWidth="0.0" text=" " GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="home8" strokeType="OUTSIDE" strokeWidth="0.0" text=" " GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="home9" strokeType="OUTSIDE" strokeWidth="0.0" text=" " GridPane.columnIndex="9" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="homeR" strokeType="OUTSIDE" strokeWidth="0.0" text=" " GridPane.columnIndex="10" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="homeH" strokeType="OUTSIDE" strokeWidth="0.0" text=" " GridPane.columnIndex="11" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="40.0" />
+                     </font>
+                  </Text>
+               </children>
+            </GridPane>
+         </children>
+         <VBox.margin>
+            <Insets top="50.0" />
+         </VBox.margin>
+      </HBox>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
+         <children>
+            <Text fx:id="currentBatterText" strokeType="OUTSIDE" strokeWidth="0.0" text="Now Batting: Lord">
+               <font>
+                  <Font size="60.0" />
+               </font>
+            </Text>
+            <HBox alignment="TOP_CENTER" prefWidth="200.0">
+               <children>
+                  <Text fx:id="avgText" strokeType="OUTSIDE" strokeWidth="0.0" text="AVG:">
+                     <font>
+                        <Font name="System Italic" size="40.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fx:id="hrText" strokeType="OUTSIDE" strokeWidth="0.0" text="HR:">
+                     <font>
+                        <Font name="System Italic" size="40.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets right="30.0" />
+                     </HBox.margin>
+                  </Text>
+                  <Text fx:id="rbiText" strokeType="OUTSIDE" strokeWidth="0.0" text="RBI:">
+                     <font>
+                        <Font name="System Italic" size="40.0" />
+                     </font>
+                  </Text>
+               </children>
+            </HBox>
+            <Text fx:id="todayText" strokeType="OUTSIDE" strokeWidth="0.0" text="Today: 0-0">
+               <font>
+                  <Font name="System Italic" size="40.0" />
+               </font>
+            </Text>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin>
+      </VBox>
+   </children>
+</VBox>
